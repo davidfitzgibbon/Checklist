@@ -50,7 +50,7 @@ $(function(){
 				parent.removeClass('todo');
 				parent.addClass('work');
 
-				parent.prevAll().removeClass('todo');
+				parent.prevAll().removeClass('todo work');
 				parent.prevAll().addClass('done');
 			} 
 
