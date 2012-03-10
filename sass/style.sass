@@ -1,0 +1,107 @@
+/* COLORS */
+
+$todo: #ff7552
+$work: #ffa952
+$done: #9feb76
+
+/* FONT SETTINGS */
+$fs: 16px
+$lh: 24px
+
+@import 'includes'
+
+*
+	-moz-box-sizing: border-box
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	
+@mixin sans
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+
+*
+	@include border-box
+
+#container
+	@include container
+	@include sans
+	font-size: $fs
+	line-height: $lh
+	padding: $lh $fs
+
+	table
+		width: 100%
+
+		th td 
+			text-align: center
+
+		td 
+			margin: 0
+			padding: 0
+			height: $lh * 2
+			width: $fs*5
+
+			
+			a 
+				height: $lh
+				display: inline-block
+				width: 100%
+				height: $lh * 2
+				color: transparent
+				cursor: pointer
+				border: 1px solid
+				-webkit-transition: all 0.3s ease-out
+				-moz-transition: all 0.3s ease-out
+				-ms-transition: all 0.3s ease-out
+				-o-transition: all 0.3s ease-out
+				transition: all 0.3s ease-out
+			
+
+			&:hover a
+				border-color: white
+
+			&.todo a
+				background: $todo
+
+			&.work a
+				background: $work
+
+			&.done a
+				background: $done
+
+	h1
+		text-align: center
+		font-size: $fs * 2
+		line-height: $lh * 2
+		margin-top: $lh
+		color: lightgrey
+		width: 83.33333333%
+		margin-left: 16.66666666%
+
+		span
+			color: grey
+			font-weight: bold
+
+	#feedback
+		width: 100%
+		height: $lh
+		background: $todo
+		width: 83.33333333%
+		margin-left: 16.66666666%
+
+		span
+			height: 100%
+			width: 0
+			display: block
+			float: left
+			-webkit-transition: all 0.3s ease-out
+			-moz-transition: all 0.3s ease-out
+			-ms-transition: all 0.3s ease-out
+			-o-transition: all 0.3s ease-out
+			transition: all 0.3s ease-out
+
+
+			&.work
+				background: $work
+
+			&.done
+				background: $done
