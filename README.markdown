@@ -1,1 +1,1 @@
-sketch of a simple prgress tracking app
+Sketch of a simple progress tracking app.
